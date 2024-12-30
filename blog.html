@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatThehECK?</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            WhatThe<span>hECK</span>
+        </a>
+
+        <i class="bx bx-menu" id="menu-icon"></i> 
+
+        <nav class="navbar">
+            <a href="index.html#services">Services</a>
+            <a href="blog.html">Blogs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="gradient-button" onclick="document.cookie = 'userID=MahtabMehek Cookie Values: 133333333337 FakeCookies'; alert(document.cookie)">Get Hecked</button>
+    </header>
+    <section class="about" id="about">
+        <div class="blog-post">
+            <h1>The Bug That Exposed Your PayPal Password</h1>
+            <h3>@Alex Birsan</h3>
+            <div class="date">
+              <i class="bx bx-calendar"></i>
+              Jan 8, 2020
+            </div>
+            <h2>Initial discovery</h2>
+            <img src="images/blog1.png" alt="">
+            <p>If you approach a target like you are the first person to ever perform a security assessment on it, and check everything thoroughly, I believe you are bound to find something new — especially if the code you are testing has been in continuous development for a while. </p>
+            <p>Sure enough, a quick test confirmed the XSSI vulnerability and, although a javascript obfuscator was used to randomize variable names on each request, the interesting tokens were still placed in fairly predictable locations, making it possible to retrieve them with just a bit of extra work.</p>
+            <img src="images/leak.png" alt="Exposed Token">
+            <p>However, a secret is only as good as the damage you can do with it. I immediately set out to find out what exactly _csrf and _sessionID were and if they could actually be used in a real attack.</p>
+            <h2>Exploitation</h2>
+            <img src="images/exploitation.png" alt="Exposed Token">
+            <p>Once the victim logged in to PayPal using the same browser, the cached random credentials would be replaced by the user’s own email and password. The last step was obtaining a fresh reCAPTCHA token, after which the plain text credentials would be retrieved with a server-side request to the /auth/validatecaptcha endpoint and displayed on the page.</p>
+            
+          </div>
+      </section>
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://github.com/mahtabmehek" target="_blank">
+                <i class="bx bxl-github "></i>
+            </a>
+            <a href="https://x.com/MahtabMehek" target="_blank">
+                <i class="bx bxl-twitter "></i>
+            </a>
+            <a href="https://linkedin.com/in/mahtabmehek/" target="_blank">
+                <i class="bx bxl-linkedin "></i>
+            </a>   
+        </div>
+        <ul class="list">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="blog.html">Blog</a>
+            </li>
+            <li>
+                <a href="about.html">About Me</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            © 2024 MahtabMehek | All rights reserved
+        </p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

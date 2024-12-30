@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /signup/
+Disallow: /private/
+Disallow: /uploads/
+
+Allow: /blog/
+Allow: /about/
